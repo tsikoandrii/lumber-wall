@@ -1,0 +1,151 @@
+.footer {
+	padding-top: 56px;
+	padding-bottom: 165px;
+
+	@media screen and (max-width: $tablet) {
+		padding-bottom: 100px;
+	}
+
+	@media screen and (max-width: $mobile) {
+		padding-top: 25px;
+		padding-bottom: 50px;
+	}
+	
+	&-action {
+		font-family: $jumper;
+		font-weight: 700;
+		font-size: 36px;
+		line-height: 43px;
+		text-decoration-line: underline;
+		color: $accent;
+
+		@media screen and (max-width: $tablet) {
+			font-size: 24px;
+		}
+
+		@media screen and (max-width: $m-tablet) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			max-width: 48%;
+			font-size: 32px;
+			text-align: left;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 16px;
+			line-height: 19px;
+			left: 16px;
+			max-width: calc(48% - 16px);
+		}
+	}
+	
+	&-link {
+		font-weight: 550;
+		font-size: 24px;
+		line-height: 24px;
+		text-decoration-line: underline;
+		color: $accent;
+		display: block;
+		margin-top: 13px;
+
+		@media screen and (max-width: $tablet) {
+			font-size: 18px;
+		}
+
+		@media screen and (max-width: $m-tablet) {
+			width: 50%;
+			font-size: 24px;
+			text-align: left;
+		}
+		
+		@media screen and (max-width: $mobile) {
+			font-size: 12px;
+			line-height: 14px;
+			margin-top: 0;
+			margin-bottom: 7px;
+			width: 45%;
+		}
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	
+	&-contacts {
+		
+		@media screen and (max-width: $m-tablet) {
+			width: 50%;
+			text-align: left;
+		}
+
+		@media screen and (max-width: $mobile) {
+			width: 45%;
+		}
+	}
+	
+	&-contacts &-link {
+		margin-bottom: 25px;
+
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 18px;
+		}
+	}
+	
+	&-socials {
+		display: flex;
+		
+		&-item {
+			
+			&:not(:last-child) {
+				margin-right: 56px;
+
+				@media screen and (max-width: $tablet) {
+					margin-right: 30px;
+				}
+
+				@media screen and (max-width: $mobile) {
+					margin-right: 21px;
+				}
+			}
+			
+			&:hover {
+				
+				svg path {
+					fill: $brown;
+				}
+			}
+			
+			svg {
+				width: 45px;
+				height: 45px;
+
+				@media screen and (max-width: $tablet) {
+					width: 30px;
+					height: 30px;
+				}
+
+				@media screen and (max-width: $mobile) {
+					width: 17px;
+					height: 17px;
+				}
+				
+				path {
+					transition: fill 0.2s;
+				}
+			}
+		}
+	}
+	
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@media screen and (max-width: $m-tablet) {
+			position: relative;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+.picture-block {
+	position: relative;
+	width: 100%;
+	height: 890px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+
+	@media screen and (max-width: $mobile) {
+		height: auto;
+		aspect-ratio: 1.46 / 1;
+	}
+	
+	&__desc {
+		position: absolute;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 36px;
+		color: #FFFDFD;
+		max-width: 486px;
+		bottom: 15px;
+		right: 0;
+
+		@media screen and (max-width: $tablet) {
+			font-size: 32px;
+			max-width: 400px;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 12px;
+			line-height: 12px;
+			max-width: 108px;
+			bottom: 5px;
+		}
+	}
+	
+	&__title {
+		width: 100%;
+		position: relative;
+		font-family: $jumper;
+		font-weight: 400;
+		font-size: 139px;
+		color: $light-grey;
+		white-space: nowrap;
+		margin-bottom: 130px;
+
+		@media screen and (max-width: $tablet) {
+			font-size: 90px;
+		}
+		
+		@media screen and (max-width: $mobile) {
+			font-size: 24px;
+			margin-bottom: 10%;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 30px;
+			left: 0;
+			right: 0;
+			height: 3px;
+			background: $light-grey;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 24px;
+				height: 1px;
+				bottom: 5px;
+			}
+		}
+	}
+}

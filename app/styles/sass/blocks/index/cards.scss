@@ -1,0 +1,72 @@
+.cards-block {
+	
+	@media screen and (max-width: $m-tablet) {
+		overflow-y: scroll;
+		margin-right: calc(-50vw + 330px);
+		
+		&::-webkit-scrollbar { width: 0; }
+	}
+
+	@media screen and (max-width: $mobile) {
+		margin-right: -16px;
+	}
+	
+	&.full-w {
+		
+		@media screen and (max-width: $m-tablet) {
+			margin-right: 0;
+			overflow-y: hidden;
+		}
+
+		.cards {
+			align-items: flex-end;
+
+			@media screen and (max-width: $m-tablet) {
+				flex-direction: column;
+			}
+
+			.card {
+				width: calc(50% - 60px);
+				margin: 30px;
+
+				@media screen and (max-width: $m-tablet) {
+					width: 100%;
+					margin: 0;
+					
+					&__title {
+						text-align: center;
+					}
+					
+					&__image {
+						aspect-ratio: 1.344 / 1;
+					}
+					
+					&:not(:last-child) {
+						margin-bottom: 50px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.cards {
+	display: flex;
+	margin: -30px;
+	flex-wrap: wrap;
+
+	@media screen and (max-width: $m-tablet) {
+		flex-wrap: nowrap;
+		margin: 0;
+	}
+	
+	.card {
+		width: calc(33.3% - 60px);
+		margin: 30px;
+
+		@media screen and (max-width: $m-tablet) {
+			min-width: 70vw;
+			margin: 0 30px 0 0;
+		}
+	}
+}

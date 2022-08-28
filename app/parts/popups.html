@@ -1,0 +1,38 @@
+<!-- Code for Popups -->
+<div class="order-popup default-popup" id="order-popup">
+	<div class="default-popup__wrapper">
+		<div class="default-popup__header">
+			<strong class="default-popup__title">Make an order</strong>
+			<button class="default-popup__close" data-close>
+				<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M17 1L1 17M17 17L1 1L17 17Z" stroke="#353535" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</button>
+		</div>
+		<form id="form" class="default-popup__body">
+			<div class="default-form">
+				<label class="default-field">
+					<span class="default-field__label">Name</span>
+					<input type="text" class="default-field__input" name="name">
+				</label>
+				<label class="default-field">
+					<span class="default-field__label">Surname</span>
+					<input type="text" class="default-field__input" name="surname">
+				</label>
+				<label class="default-field">
+					<span class="default-field__label">Phone number</span>
+					<input type="text" class="default-field__input" name="phone">
+				</label>
+				<label class="default-field">
+					<span class="default-field__label">Email</span>
+					<input type="text" class="default-field__input" name="email">
+				</label>
+				<label class="default-field">
+					<span class="default-field__label">Comment to the order (optional)</span>
+					<textarea class="default-field__input" name="comment"></textarea>
+				</label>
+			</div>
+			<button class="default-button default-form__submit">submit the form</button>
+		</form>
+	</div>
+</div>

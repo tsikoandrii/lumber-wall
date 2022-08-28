@@ -1,0 +1,188 @@
+// Text
+.default {
+	
+	&-title {
+		font-family: $jumper;
+		font-weight: 300;
+		font-size: 36px;
+		line-height: 43px;
+		text-decoration-line: underline;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+	
+	&-text {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 20px;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 12px;
+			line-height: 12px;
+		}
+	}
+	
+	&-link {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 20px;
+		text-decoration-line: underline;
+		color: #1E1E1F;
+		transition: color 0.1s ease;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 12px;
+			line-height: 12px;
+		}
+		
+		&:hover {
+			color: $brown;
+			text-decoration: none;
+		}
+	}
+}
+
+// Buttons
+.default {
+	
+	&-button {
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 20px;
+		color: $light-grey;
+		padding: 19px;
+		width: 100%;
+		max-width: 183px;
+		background: $accent;
+		transition: background-color 0.1s ease-in, color 0.1s ease;
+
+		@media screen and (max-width: $mobile) {
+			font-size: 13px;
+			line-height: 13px;
+			padding: 8px;
+			max-width: 136px;
+		}
+		
+		&:hover {
+			color: $light-grey;
+			background: $brown;
+		}
+		
+		&--light {
+			color: $accent;
+			background: $light-grey;
+
+			&:hover {
+				color: $light-grey;
+				background: $accent;
+			}
+		}
+	}
+}
+
+// Form
+.default {
+	
+	&-form {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -15px -10px;
+		
+		br {
+			display: none !important;
+		}
+
+		@media screen and (max-width: $mobile) {
+			margin: -10px -3px;
+		}
+		
+		&__submit {
+			display: block;
+			margin: 42px auto 0 auto;
+			cursor: pointer !important;
+			border-color: transparent !important;
+
+			@media screen and (max-width: $mobile) {
+				margin-top: 22px;
+				margin-left: 0;
+				font-size: 14px;
+				line-height: 14px;
+				padding: 19px 10px;
+				max-width: none;
+				width: auto;
+			}
+		}
+	}
+
+	&-form &-field {
+		width: calc(50% - 20px);
+		margin: 15px 10px;
+
+		@media screen and (max-width: $mobile) {
+			width: calc(50% - 6px);
+			margin: 10px 3px;
+		}
+		
+		&:nth-child(2n + 1):last-child {
+			width: 100%;
+		}
+	}
+	
+	&-field {
+		display: flex;
+		flex-direction: column;
+		
+		&__label {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			color: $grey;
+			margin-bottom: 20px;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 14px;
+				margin-bottom: 8px;
+			}
+		}
+		
+		&__input {
+			width: 100% !important;
+			font-weight: 400;
+			font-size: 16px;
+			color: $accent;
+			padding: 14px 16px;
+			border: 1px solid $accent;
+			background: transparent;
+			resize: none;
+
+			@media screen and (max-width: $mobile) {
+				font-size: 14px;
+				padding: 10px 12px;
+			}
+			
+			&:focus {
+				background: #fff;
+			}
+		}
+
+		.wpcf7-not-valid-tip {
+			margin-top: 10px;
+			
+			@media screen and (max-width: $mobile) {
+				font-size: 13px;
+				margin-top: 6px;
+			}
+		}
+	}
+	
+	.wpcf7-response-output {
+		padding: 20px;
+	}
+}
+
+textarea.default-field__input {
+	height: 120px;
+}

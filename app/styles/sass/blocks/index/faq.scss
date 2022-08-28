@@ -1,0 +1,35 @@
+.faq-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	&-line {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 25px;
+		}
+		
+		.default-title {
+
+			@media screen and (max-width: $mobile) {
+				margin-bottom: 22px;
+			}
+		}
+
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+		}
+	}
+	
+	.faq-list {
+		width: 70%;
+
+		@media screen and (max-width: $mobile) {
+			width: 100%;
+		}
+	}
+}

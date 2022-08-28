@@ -1,0 +1,42 @@
+// Imports
+
+// Fonts Configuration
+@mixin font($name, $style, $weight, $url, $format) {
+	@font-face {
+		font-family: $name;
+		font-style: $style;
+		font-weight: $weight;
+		src: url($url) format($format);
+		font-display: swap;
+	}
+}
+
+@include font('HelveticaNeueCyr', normal, 300, '../fonts/HelveticaNeueCyr-Light.woff', 'woff');
+@include font('HelveticaNeueCyr', normal, 400, '../fonts/HelveticaNeueCyr-Roman.woff', 'woff');
+@include font('HelveticaNeueCyr', normal, 500, '../fonts/HelveticaNeueCyr-Medium.woff', 'woff');
+@include font('HelveticaNeueCyr', normal, 700, '../fonts/HelveticaNeueCyr-Bold.woff', 'woff');
+
+@include font('Jumper', normal, 100, '../fonts/Jumper-Thin.woff2', 'woff2');
+@include font('Jumper', normal, 300, '../fonts/Jumper-Light.woff2', 'woff2');
+@include font('Jumper', normal, normal, '../fonts/Jumper-Regular.woff2', 'woff2');
+@include font('Jumper', normal, bold, '../fonts/Jumper-Bold.woff2', 'woff2');
+
+// Color Variables
+$black: #000;
+$white: #fff;
+$grey: #353535;
+$brown: #c3935d;
+$light-grey: #F1F1F1;
+$accent: #1E1E1F;
+$text-color: $accent;
+$border-color: $accent;
+
+// Font Variables
+$font: 'HelveticaNeueCyr', sans-serif;
+$jumper: 'Jumper', sans-serif;
+
+// Resolutions
+$laptop: 1450px;
+$tablet: 1220px;
+$m-tablet: 920px;
+$mobile: 640px;

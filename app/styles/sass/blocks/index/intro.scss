@@ -1,0 +1,72 @@
+.intro-block {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	height: 690px;
+	margin-bottom: 147px;
+	overflow: hidden;
+	
+	@media screen and (min-width: $m-tablet) and (max-height: 768px) {
+		height: 500px;
+	}
+	
+	&__image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		z-index: -1;
+	}
+
+	@media screen and (max-width: $mobile) {
+		height: calc(100vh - 150px);
+		margin-bottom: 50px;
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	.default-button {
+		margin-bottom: 68px;
+	}
+}
+
+.scroll-down {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 13px;
+	color: $light-grey;
+	text-decoration: none;
+	transition: transform 0.2s;
+
+	@media screen and (max-width: $mobile) {
+		display: none;
+	}
+	
+	&:hover {
+		transform: translateY(-15%);
+		
+		&::after {
+			transform: translateY(15%);
+		}
+	}
+	
+	&::after {
+		content: "";
+		width: 1px;
+		height: 60px;
+		display: block;
+		background: $light-grey;
+		margin-top: 3px;
+		transition: transform 0.2s;
+	}
+}

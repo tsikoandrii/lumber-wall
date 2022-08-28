@@ -1,0 +1,32 @@
+.card {
+	
+	&__title {
+		margin-bottom: 57px;
+		display: block;
+		
+		@media screen and (max-width: $laptop) {
+			white-space: nowrap;
+			font-size: 34px;
+		}
+		
+		@media screen and (max-width: $tablet) {
+			white-space: normal;
+		}
+
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 22px;
+		}
+	}
+	
+	&__image {
+		width: 100%;
+		aspect-ratio: 1 / 0.98;
+		margin-bottom: 50px;
+		object-fit: cover;
+
+		@media screen and (max-width: $mobile) {
+			margin-bottom: 25px;
+			aspect-ratio: 1 / 1.4
+		}
+	}
+}

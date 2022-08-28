@@ -1,0 +1,78 @@
+.header {
+	padding-top: 45px;
+	padding-bottom: 20px;
+
+	@media screen and (max-width: $m-tablet) {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	@media screen and (max-width: $mobile) {
+		padding-top: 60px;
+		padding-bottom: 12px;
+	}
+	
+	&-logotype {
+		position: relative;
+		font-family: $jumper;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 139px;
+		color: $accent;
+		text-decoration: none;
+		mix-blend-mode: normal;
+
+		@media screen and (max-width: $laptop) {
+			font-size: 120px;
+		}
+
+		@media screen and (max-width: $tablet) {
+			font-size: 90px;
+		}
+
+		@media screen and (max-width: $m-tablet) {
+			font-size: 30px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media screen and (max-width: $mobile) {
+			font-size: 24px;
+		}
+		
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0.2em;
+			left: 0;
+			right: 0;
+			height: 0.02em;
+			background: $accent;
+
+			@media screen and (max-width: $m-tablet) {
+				bottom: auto;
+				top: 1em;
+			}
+		}
+		
+		&__label {
+			font-style: italic;
+			font-weight: 100;
+			font-size: 0.1em;
+
+			@media screen and (max-width: $m-tablet) {
+				font-style: normal;
+				align-self: flex-end;
+				font-size: 0.5em;
+				margin-top: 0.75em;
+				line-height: 1.166em;
+				text-align: right;
+			}
+
+			@media screen and (max-width: $mobile) {
+				margin-top: 1em;
+				max-width: 200px;
+			}
+		}
+	}
+}
